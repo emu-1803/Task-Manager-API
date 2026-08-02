@@ -21,7 +21,7 @@ function renderTasks(tasks) {
     <div class="task-info">
         <strong>${task.title}</strong>
         <p class="status">
-            Status: ${task.completed ? "Completed " : "Not Completed"}
+        ${task.completed ? "Completed " : "Not Completed"}
         </p>
         <p class="priority-${task.priority}">
             Priority: ${task.priority}
