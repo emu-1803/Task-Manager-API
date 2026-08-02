@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80);
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 650px;
+  background: #fff8f0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+  background: #264653;
+  color: #fdfcfb;
+  text-align: center;
+  padding: 25px;
+  font-size: 2rem;
+}
+
+#task-form {
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  background: #f7ede2;
+}
+
+#title {
+  flex: 1;
+}
+
+input,
+select {
+  padding: 12px;
+  border: 2px solid #84a59d;
+  background: #ffffff;
+  color: #264653;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+}
+
+input:focus,
+select:focus {
+  border-color: #2a9d8f;
+}
+
+button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 10px;
+  background: #e76f51;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #d65a3a;
+}
+
+#task-list {
+  list-style: none;
+  padding: 20px;
+  background: #fff8f0;
+}
+
+#task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-left: 6px solid #2a9d8f;
+  background: #f9f9f9;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+#task-list li:hover {
+  transform: translateX(6px);
+  box-shadow: 0 6px 15px #fdf4ec;
+}
+.task-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.task-info strong {
+  font-size: 17px;
+  color: #222;
+}
+
+.status {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.priority-high,
+.priority-medium,
+.priority-low {
+  margin: 0;
+}
+
+.btn-delete {
+  background: #c1121f;
+  margin-right: 4px;
+}
+
+.btn-delete:hover {
+  background: #9b0d17;
+}
+
+.priority-high {
+  color: #c1121f;
+  font-weight: bold;
+}
+
+.priority-medium {
+  color: #e9a03b;
+  font-weight: bold;
+}
+
+.priority-low {
+  color: #2a9d8f;
+  font-weight: bold;
+}
+
+@media (max-width: 650px) {
+  #task-form {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
