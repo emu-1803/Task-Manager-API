@@ -21,7 +21,7 @@ function renderTasks(tasks) {
     <div class="task-info">
         <strong>${task.title}</strong>
         <p class="status">
-            Status: ${task.completed ? "Completed " : "Pending "}
+            Status: ${task.completed ? "Completed " : "Not Completed"}
         </p>
         <p class="priority-${task.priority}">
             Priority: ${task.priority}
@@ -29,7 +29,7 @@ function renderTasks(tasks) {
     </div>
 
     <div class="task-buttons">
-        <button class="btn-complete" onclick="toggleComplete(${task.id})">
+        <button class="btn-complete" onclick="completeTask(${task.id},${task.completed})">
             ${task.completed ? "Undo" : "Complete"}
         </button>
 
@@ -96,4 +96,5 @@ async function completeTask(id, completed) {
     console.error("Error updating task:", error);
   }
 }
+
 fetchTasks();

@@ -148,7 +148,7 @@ button:hover {
   font-weight: bold;
 }
 
-@media (max-width: 650px) {
+/* @media (max-width: 650px) {
   #task-form {
     flex-direction: column;
   }
@@ -156,4 +156,4 @@ button:hover {
   button {
     width: 100%;
   }
-}
+} */
